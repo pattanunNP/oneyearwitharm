@@ -22,8 +22,14 @@ try {
     }
 }
 
-if (process.env.NODE_ENV === `production` && config.siteUrl === `http://localhost:8000` && !process.env.SITEURL) {
-    throw new Error(`siteUrl can't be localhost and needs to be configured in siteConfig. Check the README.`) // eslint-disable-line
+if (
+    process.env.NODE_ENV === `production` &&
+    config.siteUrl === `https://oneyearwitharm.herokuapp.com` &&
+    !process.env.SITEURL
+) {
+    throw new Error(
+        `siteUrl can't be localhost and needs to be configured in siteConfig. Check the README.`
+    ); // eslint-disable-line
 }
 
 /**
